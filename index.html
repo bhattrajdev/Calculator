@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+     
+        }
+
+        .custom {
+            margin-top: 200px;
+        }
+
+        .result {
+            margin-top: 10px;
+            padding-top: 30px;
+            font-size: 40px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    </style>
+    <div class="custom">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3">
+                <table class="table table-dark">
+                    <tr>
+                        <input type="text" style="text-align: right;" class="form-control result" disabled id="result">
+                    </tr>
+
+                    <!-- for buttons -->
+                    <tr class="mt-4">
+                        <td><button class="btn btn-secondary"  onclick="clr()">C</button></td>
+                        <td><button class="btn btn-secondary" onclick="clrOne()"><i class="bi bi-backspace bi-fill"></i></button></td>
+                        <td><button class="btn btn-secondary" value="%" onclick="number(value)">%</button></td>
+                        <td><button class="btn btn-secondary" value="/" onclick="number(value)">/</button></td>
+                    </tr>
+                    <tr class="mt-4">
+                        <td><button class="btn btn-dark number" value="7" onclick="number(value)">7</button></td>
+                        <td><button class="btn btn-dark number" value="8" onclick="number(value)">8</button></td>
+                        <td><button class="btn btn-dark number" value="9" onclick="number(value)">9</button></td>
+                        <td><button class="btn btn-secondary" value="*" onclick="number(value)">x</button></td>
+                    </tr>
+                    <tr class="mt-4">
+                        <td><button class="btn btn-dark number" value="4" onclick="number(value)">4</button></td>
+                        <td><button class="btn btn-dark number" value="5" onclick="number(value)">5</button></td>
+                        <td><button class="btn btn-dark number" value="6" onclick="number(value)">6</button></td>
+                        <td><button class="btn btn-secondary"  value="-" onclick="number(value)">-</button></td>
+                    </tr>
+                    <tr class="mt-4">
+                        <td><button class="btn btn-dark number" value="1" onclick="number(value)">1</button></td>
+                        <td><button class="btn btn-dark number" value="2" onclick="number(value)">2</button></td>
+                        <td><button class="btn btn-dark number" value="3" onclick="number(value)">3</button></td>
+                        <td><button class="btn btn-secondary" value="+" onclick="number(value)">+</button></td>
+                    </tr>
+                    <tr class="mt-4">
+                        <td><button class="btn btn-dark number" value="." onclick="number(value)">.</button></td>
+                        <td><button class="btn btn-dark number" value="00" onclick="number(value)">00</button></td>
+                        <td><button class="btn btn-dark number" value="0" onclick="number(value)">0</button></td>
+                        <td><button class="btn btn-success" onclick="operation()">=</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        Java Script is disabled in the browser please enable it to see the page
+    </noscript>
+    <script src="src/custom.js"></script>
+</body>
+
+</html>
